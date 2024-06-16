@@ -568,3 +568,13 @@ h2+h5 {
         width: 35%;
     }
 }
+
+@media(max-height: 800px) {
+    .cards {
+        height: 83vh;
+    }
+
+    .singleService {
+        height: 50vh;
+    }
+}
