@@ -1,0 +1,570 @@
+p {
+    margin: 0;
+}
+
+hr {
+    box-shadow: 1px 1px 5px 1px rgb(170, 167, 167);
+}
+
+.homePage {
+    background-image: url('./assests/images/dog.jpg');
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+}
+
+.Navbar {
+    background-color: transparent;
+    opacity: .9;
+    /* box-shadow: 1px 1px 5px 1px rgb(170, 167, 167); */
+}
+
+.banner {
+    /* background-image: linear-gradient(#f2f2f2, #ffffff); */
+    background: white;
+    width: 50%;
+    padding: 3%;
+    border-radius: 8px;
+    opacity: .9;
+    box-shadow: 1px 1px 5px 1px rgb(170, 167, 167);
+}
+
+
+.banner button {
+    padding: 3% 7%;
+    border: 1px black solid;
+    margin-top: 50px;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    font-family: "Raleway", sans-serif;
+    background-color: #d97a0f;
+    border: none;
+    transition: 0.5s ease-in-out;
+}
+
+.banner button:hover {
+    background-color: #ff8800;
+    color: white;
+    border-color: white;
+
+    scale: 1.01;
+}
+
+.banner .row {
+    height: 45vh;
+}
+
+.banner .col-6 {
+    height: 100%;
+    background-color: white;
+    border-radius: 8px;
+}
+
+.banner img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.container+hr {
+    margin: 0;
+
+    box-shadow: 1px 1px 5px 1px rgb(170, 167, 167);
+}
+
+
+.Content {
+    padding: 3% 10%;
+    position: relative;
+}
+
+.desc {
+    font-weight: lighter !important;
+}
+
+.menu {
+    border: none;
+    padding: 1% 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.menu .active {
+    color: white;
+    font-weight: bold;
+    transition: .4s ease;
+    scale: 1.05;
+    border-bottom: 1px solid white;
+
+}
+
+.user {
+    background-color: rgb(255, 136, 0);
+    color: white;
+    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 5px;
+}
+
+.search input {
+    width: 100%;
+    border: none;
+    font-family: "Raleway", sans-serif;
+}
+
+input:focus {
+    outline: none;
+}
+
+.search .inputField {
+
+    padding: 1%;
+    box-shadow: 1px 1px 5px 1px rgb(170, 167, 167);
+    border-radius: 5px;
+}
+
+.search .input1 {
+    width: 35%;
+    border-right: 1px solid rgb(170, 167, 167);
+}
+
+.search .input2 {
+    width: 65%;
+}
+
+
+.pointer {
+    cursor: pointer;
+}
+
+.petCard {
+    height: 60vh;
+}
+
+.petCard img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px 1px rgb(170, 167, 167);
+}
+
+.Content .cardContent {
+    position: absolute;
+    width: 35%;
+    background-color: white;
+    opacity: 65%;
+    padding: 2%;
+    border-radius: 5px;
+}
+
+.topLeft {
+    top: 15%;
+    left: 14%;
+}
+
+.topRight {
+    top: 15%;
+    right: 14%;
+}
+
+.cardContent button {
+    padding: 3% 7%;
+    border: 1px black solid;
+    margin-top: 50px;
+    color: black;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.cardContent button:hover {
+    background-color: #d97a0f;
+    color: white;
+    border-color: white;
+    transition: 0.5s ease-in-out;
+    scale: 1.1;
+}
+
+.social-icons i {
+    margin: 0 10px;
+    cursor: pointer;
+    color: gray;
+    font-size: 20px;
+}
+
+input[type='radio'] {
+    display: none;
+}
+
+.services {
+    width: 100%;
+    font-family: "Raleway", sans-serif;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    height: 60vh;
+    width: 100%;
+}
+
+.item {
+    position: absolute;
+    width: 25%;
+    height: 100%;
+    text-align: center;
+    cursor: pointer;
+    transition: .4s ease;
+}
+
+.service {
+    padding: 2%;
+    height: 100%;
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid rgb(255, 136, 0);
+    position: relative;
+}
+
+#item-1:checked~.cards #song-2,
+#item-2:checked~.cards #song-3,
+#item-3:checked~.cards #song-1 {
+    transform: translateX(50%) scale(.8);
+    opacity: .4;
+    z-index: 0;
+}
+
+
+#item-1:checked~.cards #song-3,
+#item-2:checked~.cards #song-1,
+#item-3:checked~.cards #song-2 {
+    transform: translateX(-50%) scale(.8);
+    opacity: .4;
+    z-index: 0;
+}
+
+#item-1:checked~.cards #song-1,
+#item-2:checked~.cards #song-2,
+#item-3:checked~.cards #song-3 {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+    z-index: 1;
+
+    img,
+    .service {
+        box-shadow: 0px 0px 5px 0px rgba(81, 81, 81, 0.47);
+        background-color: white;
+        opacity: .9;
+    }
+}
+
+h2+h5 {
+    font-family: "Caudex", serif;
+}
+
+.service button {
+    width: 90%;
+    padding: 2%;
+    background-color: rgb(217, 122, 15);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    transition: .4s ease;
+    position: absolute;
+    bottom: 15px;
+    left: 5%;
+}
+
+.service button:hover {
+    background-color: rgb(255, 136, 0);
+    scale: 1.01;
+}
+
+.service .list {
+    font-size: 1.2rem;
+    text-align: left;
+}
+
+.service .list i {
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.singleServices button {
+    background-color: rgb(217, 122, 15);
+    border: none;
+    color: white;
+    padding: 2% 4%;
+    border-radius: 5px;
+}
+
+.singleServices button:hover {
+    background-color: rgb(255, 136, 0);
+    scale: 1.01;
+}
+
+.singleService {
+    width: 30%;
+    height: 32vh;
+    position: relative;
+    margin: 20px;
+    cursor: pointer;
+    font-family: "Raleway", sans-serif;
+    transition: .4s ease;
+    border-radius: 12px;
+    padding: 10px;
+}
+
+.singleService:hover {
+    box-shadow: 1px 1px 10px 1px rgb(220, 212, 212);
+}
+
+.singleService .image {
+    width: 100%;
+    height: 85%;
+}
+
+.singleService .image img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    border-radius: 12px;
+}
+
+.singleService h6 {
+    margin-top: 10px;
+}
+
+.about {
+    height: 50vh;
+    /* background-image: linear-gradient(180deg, #bfbfbf, #ffffff) */
+
+}
+
+.about h1 {
+    font-size: 5rem;
+    font-family: "Caudex", serif;
+    font-weight: 900;
+
+    background: -webkit-linear-gradient( #ff8800, black);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.about button {
+    padding: 1% 3%;
+    border: none;
+    border-radius: 5px;
+    background-color: #d97a0f;
+    color: white;
+    font-weight: 500;
+    transition: .4s ease-in-out;
+    width: fit-content;
+    
+}
+
+.about button:hover {
+    background-color: #ff8800;
+    scale: 1.02;
+    box-shadow: 1px 1px 10px 1px rgb(220, 212, 212);
+}
+
+.about .container {
+    height: 100%;
+}
+
+.about .container img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 1px 1px 10px 1px rgb(220, 212, 212);
+}
+
+.alignBottom {
+    position: absolute;
+    bottom: 0;
+}
+
+.bg-orange {
+    background-color: #d97a0f;
+}
+
+.jumbotronBottom {
+    height: 30vh;
+    width: 100%;
+    color: white;
+}
+
+.jumbotronBottom h5 {
+    width: 75%;
+}
+
+.jumbotronBottom img {
+    position: absolute;
+    right: 5%;
+    height: 150%;
+    bottom: 0;
+}
+
+.backButton {
+    padding: 1% 3%;
+    border: none;
+    border-radius: 5px;
+    transition: .4s ease-in-out;
+}
+
+.backButton:hover {
+    box-shadow: 1px 1px 10px 1px rgb(220, 212, 212);
+}
+
+.displayImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: 1px 1px 10px 1px rgb(220, 212, 212);
+    border-radius: 8px;
+}
+
+.serviceContent {
+    font-family: "Roboto", sans-serif;
+    width: 100%;
+}
+
+.serviceContent input {
+    border: none;
+    border-bottom: 1px solid gray;
+    font-weight: 500;
+}
+
+.couponCode-enter {
+    opacity: 0;
+    transform: translateY(-20px);
+}
+.couponCode-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.4s ease-in, transform 0.4s ease-in;
+}
+.couponCode-exit {
+    opacity: 1;
+    transform: translateY(0);
+}
+.couponCode-exit-active {
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.4s ease-in, transform 0.4s ease-in;
+}
+
+.coupon {
+    background-color: #d97a0f;
+    color: white;
+    padding: 1%;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .4s ease-in-out;
+    border: none;
+}
+
+.coupon:hover {
+    background-color: #ff8800;
+}
+
+.bookingButton {
+    padding: 2% 5%;
+    background-color: #d97a0f;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    transition: .4s ease-in-out;
+}
+
+.bookingButton:hover {
+    background-color: #ff8800;
+    box-shadow: 1px 1px 10px 1px rgb(220, 212, 212);
+}
+
+.popUp {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    left: 0;
+    top: 0;
+}
+
+.popUp-content {
+    background-color: white;
+    width: 50%;
+    height: 50vh;
+    border-radius: 8px;
+    box-shadow: 1px 1px 10px 1px rgb(220, 212, 212);
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    right: 30px;
+    top: 30px;
+}
+
+.cancel {
+    padding: 1% 3%;
+    background-color: rgb(195, 22, 22);
+    border: none;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px 1px rgb(220, 212, 212);   
+    transition: .4s ease-in-out;
+}
+
+.payment {
+    padding: 1% 3%;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px 1px rgb(220, 212, 212);   
+    transition: .4s ease-in-out;
+    background-color: #d97a0f;
+    margin-right: 20px;
+}
+
+.payment:hover {
+    background-color: #ff8800;
+}
+
+.cancel:hover {
+    background-color: rgb(251, 6, 6);
+}
+
+.caudexFont {
+    font-family: "Caudex", serif;
+}
+
+.ralewayFont {
+    font-family: "Raleway", sans-serif;
+}
+
+.robotoFont {
+    font-family: "Roboto", sans-serif;
+}
+
+@media(max-width: 1650px) {
+    .item {
+        width: 35%;
+    }
+}
