@@ -68,6 +68,10 @@ hr {
     object-fit: contain;
 }
 
+.banner p {
+    font-size: 1.25rem;
+}
+
 .container+hr {
     margin: 0;
 
@@ -563,13 +567,25 @@ h2+h5 {
     font-family: "Roboto", sans-serif;
 }
 
-@media(min-width: 1200px) {
+@media(max-width: 1400px) {
     h1 {
         font-size: 2rem;
     }
 
+    h3 {
+        font-size: 1.5rem;
+    }
+
     .menu {
         font-size: 1rem;
+    }
+
+    .banner p {
+        font-size: 1rem;
+    }
+
+    .about h1 {
+        font-size: 3rem;
     }
 }
 
