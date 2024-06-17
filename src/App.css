@@ -357,7 +357,7 @@ h2+h5 {
 }
 
 .about h1 {
-    font-size: 5rem;
+    font-size: 4rem;
     font-family: "Caudex", serif;
     font-weight: 900;
 
@@ -602,5 +602,11 @@ h2+h5 {
 
     .singleService {
         height: 50vh;
+    }
+}
+
+@media (min-height: 850px) {
+    .alignBottom {
+        position: absolute;
     }
 }
