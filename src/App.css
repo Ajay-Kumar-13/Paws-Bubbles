@@ -397,7 +397,7 @@ h2+h5 {
 }
 
 .alignBottom {
-    position: absolute;
+    position: relative;
     bottom: 0;
 }
 
