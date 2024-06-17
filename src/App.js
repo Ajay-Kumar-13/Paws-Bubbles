@@ -20,7 +20,7 @@ function App() {
 			<div className='container mt-5'>
 				<div className='banner'>
 					<h1 className='ralewayFont'>Pet Grooming Service at Home.</h1>
-					<p className='ralewayFont fs-5 mt-4'>At Paws & Bubbles, we provide top-notch pet grooming services to keep your furry friends looking and feeling their best. From to nail trimming, our experienced team will give your pets the care and attention they deserve.</p>
+					<p className='ralewayFont fs-md-5 fs-6 mt-4'>At Paws & Bubbles, we provide top-notch pet grooming services to keep your furry friends looking and feeling their best. From to nail trimming, our experienced team will give your pets the care and attention they deserve.</p>
 					<button className='mt-5 fs-5' onClick={() => {navigate('/services')}}>Book a Professional Groomer</button>
 				</div>
 			</div>
