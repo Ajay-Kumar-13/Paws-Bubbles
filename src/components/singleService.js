@@ -8,10 +8,12 @@ function SingleService() {
     const [currentPath, setCurrentPath] = useState('');
 
     useEffect(() => {
+        console.log("here");
         setCurrentPath(decodeURIComponent(window.location.pathname).slice(1));
     }, [])
 
     const handleClick = (service) => {
+        setCurrentPath(service);
         navigate(`/${service}`)
     }
 
@@ -29,14 +31,23 @@ function SingleService() {
                         {currentPath == 'Bath with shampoo' && <img src="/assests/bath.jpg" />}
                         {currentPath == 'Nail Cliping' && <img src="/assests/nailcliping.jpg" />}
                         {currentPath == 'Eye&Ear Cleaning' && <img src="/assests/earcleaning.webp" />}
-                        {/* { currentPath == 'Bath with shampoo' && <img src="/assests/bath.jpg" /> }
-                        { currentPath == 'Bath with shampoo' && <img src="/assests/bath.jpg" /> }
-                        { currentPath == 'Bath with shampoo' && <img src="/assests/bath.jpg" /> }
-                        { currentPath == 'Bath with shampoo' && <img src="/assests/bath.jpg" /> }
-                        { currentPath == 'Bath with shampoo' && <img src="/assests/bath.jpg" /> } */}
+                        { currentPath == 'Hair Styling & Trimming' && <img src="/assests/hairstyle.jpg" /> }
+                        { currentPath == 'Combing&Brushing' && <img src="/assests/combing.jpg" /> }
+                        { currentPath == 'Full Body Trimming' && <img src="/assests/fullBodyTrimming.webp" /> }
+                        { currentPath == 'Paw Massage' && <img src="/assests/dog-massage-reflexology.webp" /> }
+                        { currentPath == 'De-shedding Treatment' && <img src="/assests/deshedding.jpeg" /> }
+                        { currentPath == 'Anti-Tick Treatment' && <img src="/assests/ticktreatment.jpg" /> }
                     </div>
                     <div className="col-6 d-flex align-items-center ">
                         {currentPath == 'Bath with shampoo' && <ServiceContent service='Bath with shampoo' />}
+                        {currentPath == 'Nail Cliping' && <ServiceContent service='Nail Cliping' />}
+                        {currentPath == 'Eye&Ear Cleaning' && <ServiceContent service='Eye and Ear Cleaning' />}
+                        { currentPath == 'Hair Styling & Trimming' && <ServiceContent service='Hair Styling & Trimming' />}
+                        { currentPath == 'Combing&Brushing' && <ServiceContent service='Combing and Brushing' /> }
+                        { currentPath == 'Full Body Trimming' && <ServiceContent service='Full Body Trimming' /> }
+                        { currentPath == 'Paw Massage' && <ServiceContent service='Paw Massage' /> }
+                        { currentPath == 'De-shedding Treatment' && <ServiceContent service='De-Shedding Treatment' /> }
+                        { currentPath == 'Anti-Tick Treatment' && <ServiceContent service='Anti-Tick Treatment' /> }
                     </div>
                 </div>
             </div>
